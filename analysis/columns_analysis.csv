@@ -1,0 +1,121 @@
+OBS,Anos,DB_TABLE,DB_ATTRIBUTE,Coluna,NULL PERCENT,NOME,SIGNIFICADO,Detalhes
+,"[20, 21, 22]",Exames,resultado_igm,RESUL_SORO,"33,82",Resultado IgM Dengue,Resultado do Exame Sorológico (IgM) Dengue.,Habilitado apenas se Agravo=Dengue.
+,"[20, 21, 22]",Exames,resultado_ns1,RESUL_NS1,"37,42",Resultado NS1,Resultado do Exame Sorologia ELISA (NS1).,Habilitado apenas se Agravo=Dengue.
+,"[20, 21, 22]",Exames,resultado_rt_pcr,RESUL_PCR_,"48,52",Resultado RT-PCR,Resultado do Exame de RT-PCR.,Habilitado para dengue ou chikungunya.
+,"[20, 21, 22]",Exames,resultado_isolamento_viral,RESUL_VI_N,"48,73",Resultado Isolamento Viral,Resultado Exame de Isolamento Viral.,Habilitado para dengue ou chikungunya.
+,"[20, 21, 22]",Exames,resultado_imunohistoquímica,IMUNOH_N,"53,67",Resultado Imunohistoquímica,Resultado Exame de Imuno-histoquímica.,Habilitado apenas se Agravo=Dengue.
+,"[20, 21, 22]",Exames,resultado_histopatologia,HISTOPA_N,"53,84",Resultado Histopatologia,Resultado Exame de Histopatologia.,Habilitado apenas se Agravo=Dengue.
+,"[20, 21, 22]",Exames,resultado_IgM_Chik_S1,RES_CHIKS1,"99,61",Resultado IgM Chik (S1),Resultado do Exame Sorológico (IgM) Chikungunya soro 1.,Habilitado apenas se Agravo=Chikungunya.
+,"[20, 21, 22]",Exames,resultado_IgM_Chik_S2,RES_CHIKS2,"99,67",Resultado IgM Chik (S2),Resultado do Exame Sorológico (IgM) Chikungunya soro 2.,Habilitado apenas se Agravo=Chikungunya.
+,"[20, 21, 22]",Exames,resultado_PRNT,RESUL_PRNT,"99,67",Resultado PRNT,Resultado do Exame Sorológico (IgM) PRNT.,Habilitado apenas se Agravo=Chikungunya.
+,"[20, 21, 22]",Exames,data_coleta_isolamento_viral,DT_VIRAL,"99,76",Data Coleta Isolamento Viral,Data da Coleta Isolamento Viral.,Deve ser maior ou igual à data de primeiros sintomas.
+,"[20, 21, 22]",Exames,data_coleta_igm_chik_S1,DT_CHIK_S1,"99,83",Data Coleta IgM Chik (S1),Data da Coleta Exame Sorológico (IgM) Chikungunya soro 1.,Habilitado apenas se Agravo=Chikungunya.
+,"[20, 21, 22]",Exames,data_coleta_prnt,DT_PRNT,"99,98",Data Coleta PRNT,Data da Coleta Exame PRNT.,Habilitado apenas se Agravo=Chikungunya.
+,"[20, 21, 22]",Exames,data_coleta_igm_chik_S2,DT_CHIK_S2,"100,00",Data Coleta IgM Chik (S2),Data da Coleta Exame Sorológico (IgM) Chikungunya soro 2.,Habilitado apenas se Agravo=Chikungunya.
+,"[20, 21, 22]",Notificacao,idade_paciente,NU_IDADE_N,"0,00",Idade,Campo composto pela unidade de medida de tempo e número da idade.,"Se campo < 4007 (7 anos), campo escolaridade é preenchido com 10-Não se aplica."
+,"[20, 21, 22]",Notificacao,ano,NU_ANO,"0,00",Ano da Notificação,Ano de notificação.,Variável interna preenchida pelo sistema a partir da data de notificação.
+,"[20, 21, 22]",Notificacao,tipo,TP_NOT,"0,00",Tipo de Notificação,"Identifica o tipo da notificação (1-Negativa, 2-Individual, 3-Surto, 4-Agregado).",Campo Obrigatório.
+,"[20, 21, 22]",Notificacao,semana_inicio,SEM_PRI,"0,00",Sem. Epid. Primeiros Sintomas,Semana epidemiológica dos primeiros sintomas.,Preenchida automaticamente a partir da data de primeiros sintomas.
+,"[20, 21, 22]",Notificacao,data_inicio_sintomas,DT_SIN_PRI,"0,00",Data Primeiros Sintomas,Data dos primeiros sintomas do caso de agravo agudo.,Campo Obrigatório. Deve ser menor ou igual à Data de Notificação.
+,"[20, 21, 22]",Notificacao,municipio_residencia,ID_MN_RESI,"0,01",Município de Residência,Código do município de residência do caso notificado.,Permite digitação do nome ou código IBGE.
+,"[20, 21, 22]",Notificacao,idade_gestacional,CS_GESTANT,"0,02",Gestante,Idade gestacional da paciente.,"Campo Obrigatório se sexo = F. Se sexo M, preenchido com 6 (Não se aplica)."
+,"[20, 21, 22]",Notificacao,Classificacao_final,CLASSI_FIN,"0,10",Classificação Final,"Classificação final do caso após investigação (1-Confirmado, 2-Descartado, etc.).",Campo Obrigatório quando a data de encerramento estiver preenchida.
+,"[20, 21, 22]",Notificacao,data_encerramentoo,DT_ENCERRA,"0,67",Data do Encerramento,Informar a data do encerramento do caso.,Campo Obrigatório quando Classificação estiver preenchida.
+,"[20, 21, 22]",Notificacao,Sistema,TP_SISTEMA,"1,26",Tipo de Sistema,"Identifica o sistema em que o registro foi inserido (1-Sinan Net, 2-Sinan Online).",Atribuído automaticamente.
+,"[20, 21, 22]",Notificacao,data_inicio_investigacao,DT_INVEST,"3,00",Data da Investigação,Data de início da investigação do caso.,Campo Obrigatório.
+,"[20, 21, 22]",Notificacao,criterio_confirmacao,CRITERIO,"9,77",Critério de Confirmação,"Critério utilizado para confirmação ou descarte (1-Laboratório, 2-Clínico-epidem., 3-Clínico).",Campo Essencial.
+,"[20, 21, 22]",Notificacao,evolucao_caso,EVOLUCAO,"15,32",Evolução do Caso,"Informar a evolução do caso (1-Cura, 2-Óbito, etc.).",Campo Essencial.
+,"[20, 21, 22]",Notificacao,hospitalizacao,HOSPITALIZ,"26,92",,"Informa se ocorreu hospitalização (1-Sim, 2-Não, 9-Ignorado).","Se Não/Ignorado, pula campos de internação."
+,"[20, 21, 22]",Notificacao,semana_notificacao,SEM_NOT,"38,34",Semana Epid. Notificação,Semana epidemiológica que o caso foi notificado.,Preenchida automaticamente a partir da data de notificação.
+,"[20, 21, 22]",Notificacao,fluxo_retorno,CS_FLXRET,"61,66",Fluxo de Retorno,Identifica se o registro está habilitado ou foi enviado pelo fluxo de retorno.,Categoria atribuída manual ou automaticamente.
+,"[20, 21, 22]",Notificacao,data_coleta_igm_dengue,DT_SORO,"70,51",Data Coleta IgM Dengue,Data da Coleta Exame Sorológico (IgM) Dengue.,Deve ser maior ou igual à data de primeiros sintomas.
+,"[20, 21, 22]",Notificacao,data_coleta_ns1,DT_NS1,"75,77",Data Coleta NS1,Data da coleta Exame Sorologia ELISA (NS1).,Deve ser maior ou igual à data de primeiros sintomas.
+,"[20, 21, 22]",Notificacao,caso_autocne,TPAUTOCTO,"9,00",Caso Autóctone?,Indica se o caso é autóctone do município de residência.,Campo Obrigatório se classificação final=1.
+,"[20, 21, 22]",Notificacao,pais_infeccao,COPAISINF,"83,56",País da Infecção,País onde o paciente foi provavelmente infectado.,Preenchido auto se autóctone=sim.
+,"[20, 21, 22]",Notificacao,uf_infeccao,COUFINF,"83,56",UF da Infecção,Sigla da unidade federada onde o paciente foi provavelmente infectado.,Campo Obrigatório se infecção=Brasil e confirmado.
+,"[20, 21, 22]",Notificacao,municipio_infeccao,COMUNINF,"83,62",Município da Infecção,Código do município onde o paciente foi provavelmente infectado.,Campo Obrigatório se infecção=Brasil e confirmado.
+,"[20, 21, 22]",Notificacao,data_internacao,DT_INTERNA,"97,20",Data da Internação,Informar a data de internação do paciente.,Habilitado se Hospitalização=Sim.
+,"[20, 21, 22]",Notificacao,municipio_internacao,MUNICIPIO,"97,22",Município (Hospitalização),Código e nome completo do município onde o paciente foi hospitalizado.,Habilitado se Hospitalização=Sim.
+,"[20, 21, 22]",Notificacao,data_coleta_rt_pcr,DT_PCR,"98,25",Data Coleta RT-PCR,Data de Coleta do Exame de RT-PCR.,Deve ser maior ou igual à data de primeiros sintomas.
+,"[20, 21, 22]",Notificacao,data_obito,DT_OBITO,"99,86",Data do Óbito,Informar a data do óbito.,Obrigatório se Evolução=Óbito.
+,"[20, 21, 22]",Notificacao,duplicada,NDUPLIC_N,"99,92",Não Listar/Não Contar,"Identifica duplicidade (1-Não é, 2-Duplicidade).",Utilizado para identificar registros duplicados.
+,"[20, 21, 22]",Notificacao,receb_flux_retorno,FLXRECEBI,"100,00",Recebida fluxo retorno,Identifica se o registro foi recebido pelo fluxo de retorno.,Atribuído exclusivamente pelo sistema.
+,"[21, 22]",Notificacao,data_digitacao,DT_DIGITA,"39,12",Data da Digitação,Data de Digitação da primeira inclusão da notificação no sistema.,Preenchida automaticamente.
+,"[20, 21, 22]",Paciente,UF_residencia,SG_UF,"0,00",UF (Residência),Sigla da Unidade Federada de residência do paciente por ocasião da notificação.,Campo Obrigatório se residente no Brasil.
+,"[20, 21, 22]",Paciente,pais_residencia_exterior,ID_PAIS,"0,00",País (residência),País onde residia o paciente por ocasião da notificação (se residente fora do Brasil).,"Se UF for digitada, preenchido automaticamente com ""Brasil""."
+,"[20, 21, 22]",Paciente,sexo,CS_SEXO,"0,00",Sexo,"Sexo do paciente (M-Masculino, F-Feminino, I-Ignorado).","Se Sexo = Masculino, desabilitar o campo Gestante."
+,"[20, 21, 22]",Paciente,Raça/Cor,CS_RACA,"0,00",Raça/Cor,"Considera-se cor ou raça declarada pela pessoa (1-Branca, 2-Preta, 3-Amarela, 4-Parda, 5-Indígena).",Campo Essencial.
+,"[20, 21, 22]",Paciente,id_regional_saude,ID_RG_RESI,"6,15",Regional de Saúde (Residência),Regional de saúde onde está localizado o município de residência do paciente.,Sistema relaciona município de notificação com regional.
+,"[20, 21, 22]",Paciente,Escolaridade,CS_ESCOL_N,"18,15",Escolaridade,Série e grau de instrução do paciente.,Categoria 10 (não se aplica) se idade < 7 anos.
+,"[20, 21, 22]",Paciente,Ocupação,ID_OCUPA_N,"66,40",Ocupação,Ocupação/ramo de atividade econômica do paciente.,Tabela de Ocupação.
+,"[20, 21, 22]",Paciente,sa_dor_abdominal,ALRM_ABDOM,"99,02",Sinais Alarme: Dor Abdominal,"Dor abdominal (1-Sim, 2-Não).",Obrigatório se Dengue com Sinais de Alarme ou Grave.
+,"[20, 21, 22]",Paciente,sa_hipotensão,ALRM_HIPOT,"99,02",Sinais Alarme: Hipotensão,"Hipotensão (1-Sim, 2-Não).",Obrigatório se Dengue com Sinais de Alarme ou Grave.
+,"[20, 21, 22]",Paciente,sa_sangramento,ALRM_SANG,"99,02",Sinais Alarme: Sangramento,"Sangramento de mucosa/outras hemorragias (1-Sim, 2-Não).",Obrigatório se Dengue com Sinais de Alarme ou Grave.
+,"[20, 21, 22]",Paciente,sa_vômitos,ALRM_VOM,"99,02",Sinais Alarme: Vômitos,"Vômitos persistentes (1-Sim, 2-Não).",Obrigatório se Dengue com Sinais de Alarme ou Grave.
+,"[20, 21, 22]",Paciente,sa_letargia,ALRM_LETAR,"99,03",Sinais Alarme: Letargia,"Letargia ou irritabilidade (1-Sim, 2-Não).",Obrigatório se Dengue com Sinais de Alarme ou Grave.
+,"[20, 21, 22]",Paciente,sa_hematócrito,ALRM_HEMAT,"99,03",Sinais Alarme: Hematócrito,"Aumento hematócrito (1-Sim, 2-Não).",Obrigatório se Dengue com Sinais de Alarme ou Grave.
+,"[20, 21, 22]",Paciente,sa_líquidos,ALRM_LIQ,"99,03",Sinais Alarme: Líquidos,"Acúmulo de líquidos (1-Sim, 2-Não).",Obrigatório se Dengue com Sinais de Alarme ou Grave.
+,"[20, 21, 22]",Paciente,sa_hepatomegalia,ALRM_HEPAT,"99,03",Sinais Alarme: Hepatomegalia,"Hepatomegalia (1-Sim, 2-Não).",Obrigatório se Dengue com Sinais de Alarme ou Grave.
+,"[20, 21, 22]",Paciente,data_sa,DT_ALRM,"99,04",Data Sinais Alarme,Data de início dos sintomas de Dengue com sinais de alarme.,Obrigatório se Classificação=Dengue com Sinais de Alarme.
+,"[20, 21, 22]",Paciente,sorotipo,SOROTIPO,"99,17",Sorotipo,"Sorotipo (1-DEN 1, 2-DEN 2, etc.).",Obrigatório se Isolamento ou PCR positivo.
+,"[20, 21, 22]",Paciente,tipo_chikungunya,CLINC_CHIK,"99,42",Clínica Chikungunya,"Apresentação clínica do caso de Chikungunya (1-Aguda, 2-Crônica).",Obrigatório se Agravo=Chikungunya.
+,"[20, 21, 22]",Paciente,data_nascimento,DT_NASC,"61,97",Data de Nascimento,Data de nascimento do paciente.,Usada para cálculo automático da idade.
+,"[20, 21, 22]",Quadro Clinico,sc_FEBRE,FEBRE,"3,00",Sinais clínicos (Febre),"Presença de febre (1-Sim, 2-Não).",Campo obrigatório. Sinal clínico.
+,"[20, 21, 22]",Quadro Clinico,sc_LEUCOPENIA,LEUCOPENIA,"3,00",Sinais clínicos (Leucopenia),"Presença de leucopenia (1-Sim, 2-Não).",Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,sc_EXANTEMA,EXANTEMA,"3,00",Sinais clínicos (Exantema),"Presença de exantema (1-Sim, 2-Não).",Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,sc_DOR_RETRO,DOR_RETRO,"3,00",Sinais clínicos (Dor retroorbital),"Presença de dor retroorbital (1-Sim, 2-Não).",Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,dpe_hipertensao,HIPERTENSA,"3,00",Hipertensão Arterial,Doença pré-existente: Hipertensão arterial.,Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,sc_CONJUNTVIT,CONJUNTVIT,"3,00",Sinais clínicos (Conjuntivite),"Presença de conjuntivite (1-Sim, 2-Não).",Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,sc_CEFALEIA,CEFALEIA,"3,00",Sinais clínicos (Cefaleia),"Presença de cefaleia (1-Sim, 2-Não).",Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,sc_DOR_COSTAS,DOR_COSTAS,"3,00",Sinais clínicos (Dor nas costas),"Presença de dor nas costas (1-Sim, 2-Não).",Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,dpe_diabetes,DIABETES,"3,00",Diabetes,Doença pré-existente: Diabetes.,Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,dpe_auto_imunes,AUTO_IMUNE,"3,00",Doenças auto-imunes,Doença pré-existente: Doenças auto-imunes.,Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,dpe_ácido_péptica,ACIDO_PEPT,"3,00",Doença ácido-péptica,Doença pré-existente: Doença ácido-péptica.,Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,sc_Artralgia_intensa,ARTRALGIA,"3,00",Sinais clínicos (Artralgia intensa),"Presença de artralgia intensa (1-Sim, 2-Não).",Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,sc_Artrite,ARTRITE,"3,00",Sinais clínicos (Artrite),"Presença de artrite (1-Sim, 2-Não).",Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,dpe_Doenças_hematológicas.,HEMATOLOG,"3,00",Doenças hematológicas,Doença pré-existente: Doenças hematológicas.,Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,dpe_Hepatopatias.,HEPATOPAT,"3,00",Hepatopatias,Doença pré-existente: Hepatopatias.,Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,sc_prova_laço,LACO,"3,00",Prova do laço,"Sinal clínico: Prova do laço (1-Sim, 2-Não).",Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,dpe_Doença_renal_crônica,RENAL,"3,00",Doença renal crônica,Doença pré-existente: Doença renal crônica.,Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,sc_(Vômito),VOMITO,"3,00",Sinais clínicos (Vômito),"Presença de vômito (1-Sim, 2-Não).",Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,sc_(Náusea),NAUSEA,"3,00",Sinais clínicos (Náusea),"Presença de náusea (1-Sim, 2-Não).",Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,sc_(Mialgia),MIALGIA,"3,00",Sinais clínicos (Mialgia),"Presença de mialgia (1-Sim, 2-Não).",Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,sc_(Petéquias),PETEQUIA_N,"3,00",Sinais clínicos (Petéquias),"Presença de petéquias (1-Sim, 2-Não).",Campo obrigatório.
+,"[20, 21, 22]",Quadro Clinico,sa_plaquetas,ALRM_PLAQ,"99,02",Sinais Alarme: Plaquetas,"Queda abrupta de plaquetas (1-Sim, 2-Não).",Obrigatório se Dengue com Sinais de Alarme ou Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_hipotensão,GRAV_HIPOT,"99,91",Dengue Grave: Hipotensão,Hipotensão arterial em fase tardia.,Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_taquicardia,GRAV_TAQUI,"99,91",Dengue Grave: Taquicardia,"Taquicardia (1-Sim, 2-Não).",Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_pulso,GRAV_PULSO,"99,91",Dengue Grave: Pulso,Pulso débil ou indetectável.,Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_extremidades,GRAV_EXTRE,"99,91",Dengue Grave: Extremidades,"Extremidades frias (1-Sim, 2-Não).",Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_insuf_Resp.,GRAV_INSUF,"99,91",Dengue Grave: Insuf. Resp.,Acúmulo de líquidos com insuficiência respiratória.,Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_enchimento,GRAV_ENCH,"99,91",Dengue Grave: Enchimento,Tempo de enchimento capilar.,Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_melena,GRAV_MELEN,"99,91",Dengue Grave: Melena,"Melena (1-Sim, 2-Não).",Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_pa,GRAV_CONV,"99,91",Dengue Grave: PA,"PA convergente (1-Sim, 2-Não).",Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_consciência,GRAV_CONSC,"99,91",Dengue Grave: Consciência,"Alteração da consciência (1-Sim, 2-Não).",Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_hematêmese,GRAV_HEMAT,"99,91",Dengue Grave: Hematêmese,"Hematêmese (1-Sim, 2-Não).",Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_metrorragia,GRAV_METRO,"99,91",Dengue Grave: Metrorragia,"Metrorragia volumosa (1-Sim, 2-Não).",Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_órgãos,GRAV_ORGAO,"99,91",Dengue Grave: Órgãos,Dengue grave - Outros órgãos.,Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_sangramento,GRAV_SANG,"99,91",Dengue Grave: Sangramento,Sangramento do SNC.,Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_miocardite,GRAV_MIOC,"99,91",Dengue Grave: Miocardite,"Miocardite (1-Sim, 2-Não).",Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,dg_ast_alt,GRAV_AST,"99,92",Dengue Grave: AST/ALT,AST/ALT > 1.000.,Obrigatório se Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,data_dengue_grave,DT_GRAV,"99,92",Data Dengue Grave,Dengue grave Data de início dos sintomas.,Obrigatório se Classificação=Dengue Grave.
+,"[20, 21, 22]",Quadro Clinico,mh_gengivorragia,GENGIVO,"100,00",Gengivorragia,Manifestação Hemorrágica: Gengivorragia.,"Campo de especificação ""Se Sim, Quais?""."
+,"[20, 21, 22]",Quadro Clinico,mh_epistaxe,EPISTAXE,"100,00",Epistaxe,Manifestação Hemorrágica: Epistaxe.,"Campo de especificação ""Se Sim, Quais?""."
+,"[20, 21, 22]",Quadro Clinico,caso_fhd_scd,CON_FHD,"100,00",Caso de FHD,"No Caso De FHD/SCD, Especificar.",Campo descritivo.
+,"[20, 21, 22]",Quadro Clinico,complicacoes,COMPLICA,"100,00",Dengue com Complicações,"No Caso De Dengue Com Complicações, Que Tipo De Complicações?.",Campo descritivo.
+,"[20, 21, 22]",Quadro Clinico,evidencia_extravasamento,EVIDENCIA,"100,00",Evidência de Extravasamento,"Se Extravasamento=Sim, Evidenciado Por:.",Campo descritivo.
+,"[20, 21, 22]",Quadro Clinico,mh_metrorragia,METRO,"100,00",Metrorragia,Manifestação Hemorrágica: Metrorragia.,"Campo de especificação ""Se Sim, Quais?""."
+,"[20, 21, 22]",Quadro Clinico,manifestacoes_hemorragicas,MANI_HEMOR,"100,00",Manifestações Hemorrágicas,"Manifestações Hemorrágicas (1-Sim, 2-Não).",Campo agrupador.
+,"[20, 21, 22]",Quadro Clinico,prova_laço_especif,LACO_N,"100,00",Prova do laço positiva,Especificação: Prova do laço positiva.,"Campo de especificação ""Se Sim, Quais?""."
+,"[20, 21, 22]",Quadro Clinico,mh_hematúria,HEMATURA,"100,00",Hematúria,Manifestação Hemorrágica: Hematúria.,"Campo de especificação ""Se Sim, Quais?""."
+,"[20, 21, 22]",Quadro Clinico,mh_petéquias,PETEQUIAS,"100,00",Petéquias (Esp.),Manifestação Hemorrágica: Petéquias.,"Campo de especificação ""Se Sim, Quais?""."
+,"[20, 21, 22]",Quadro Clinico,extravasamento_plasmatico,PLASMATICO,"100,00",Extravasamento Plasmático,Houve Extravasamento Plasmático.,Campo de especificação.
+,"[20, 21, 22]",Quadro Clinico,plaquetas_menor,PLAQ_MENOR,"100,00",Plaquetas (Menor),Plaquetas (Menor).,Campo de especificação.
+,"[20, 21, 22]",Quadro Clinico,mh_sangramento_gastrointestinal,SANGRAM,"100,00",Sangramento Gastroint.,Manifestação Hemorrágica: Sangramento Gastrointestinal.,"Campo de especificação ""Se Sim, Quais?""."
+,"[20, 21, 22]",Unidade_Saude,municipio,ID_MUNICIP,"0,00",Município de Notificação,Código do município onde está localizada a unidade de saúde que realizou a notificação.,Campo Chave.
+,"[20, 21, 22]",Unidade_Saude,UF,SG_UF_NOT,"0,00",UF de Notificação,Sigla da Unidade Federativa onde está localizada a unidade de saúde que realizou a notificação.,Campo Obrigatório.
+,"[20, 21, 22]",Unidade_Saude,Codigo (Nome completo + codigo),ID_UNIDADE,"0,00",Unidade de Saúde,Nome completo e código da unidade de saúde que realizou o atendimento.,Campo Obrigatório.
+,"[20, 21, 22]",Unidade_Saude,id_regional_saude,ID_REGIONA,"6,38",Regional de Saúde (Unidade),Regional de saúde onde está localizado o município da unidade de saúde.,Sistema relaciona município com regional.
+Descartado,"[21, 22]",,,ANO_NASC,"38,72",Ano de Nascimento,Ano de nascimento do paciente.,"Se preenchido, calcula idade automaticamente."
+Descartado,"[20, 21, 22]",,,UF,"97,14",UF (Geral/Duplicado),Provável duplicata ou alias para SG_UF (UF de Residência). Ver campo SG_UF.,Ver definição de SG_UF no documento.
+Descartado,"[20, 21, 22]",,,DOENCA_TRA,"100,00",Doença do Trabalho,Indica se a doença está ou não relacionada ao trabalho.,Habilitado se confirmado.
+Descartado,"[21, 22]",,,MIGRADO_W,"100,00",Migração Windows,Identifica se o registro é oriundo da rotina de migração da base Windows.,Campo interno.
