@@ -1,0 +1,23 @@
+name: 'dengue_project'
+version: '1.0.0'
+config-version: 2
+
+profile: 'dengue_project'
+
+# Configura onde os modelos SQL (as transformações) serão encontrados
+model-paths: ["models"]
+
+# Configura onde os testes e documentação serão encontrados
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+# Configuração dos modelos: garante que todas as tabelas dbt serão criadas
+# no schema 'public' (ou o que você definir no profiles.yml)
+models:
+  dengue_project:
+    +materialized: view
+
+vars:
+  surrogate_key_treat_nulls_as_empty_strings: True
