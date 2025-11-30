@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: dengue_raw
+    schema: public
+
+    tables:
+      - name: dengue_raw_2020
+      - name: dengue_raw_2021
+      - name: dengue_raw_2022
