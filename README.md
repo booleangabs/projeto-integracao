@@ -2,6 +2,8 @@
 
 Pipeline ETL/ELT para análise de dados de notificações de dengue no Brasil, utilizando dados do Sistema de Informação de Agravos de Notificação (SINAN) do OpenDataSUS.
 
+[Relatório](https://docs.google.com/document/d/1vgZkXXLSiDTwJ_Ra-N6O_aeIuo5cmfFL4RfVDWkRZWw/edit?tab=t.0)
+
 ## Sumário
 
 - [Sobre o Projeto](#sobre-o-projeto)
